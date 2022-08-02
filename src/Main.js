@@ -3,12 +3,11 @@ import {
   Route,
   Routes,
   NavLink,
-  HashRouter,
   BrowserRouter
 } from "react-router-dom";
 import Home from "./Home";
-import Stuff from "./Stuff";
-import Contact from "./Contact";
+import Settings from "./Settings";
+import Effects from "./Effects";
  
 class Main extends Component {
   render() {
@@ -16,18 +15,18 @@ class Main extends Component {
       <BrowserRouter>
  
         <div>
-          <h1>Simple SPA</h1>
+          <h1>NightDriver LED</h1>
           <ul className="header">
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/effects">Effects</NavLink></li>
+            <li><NavLink to="/settings">Settings</NavLink></li>
           </ul>
         </div>
         <div className="content">
         <Routes>
               <Route path="/" exact element={<Home/>}/>
-              <Route path="/stuff" element={<Stuff/>}/>
-              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/effects" element={<Effects/>}/>
+              <Route path="/settings" element={<Settings/>}/>
           </Routes>             
         </div>
       </BrowserRouter>
