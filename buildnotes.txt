@@ -1,0 +1,4 @@
+- Install node
+- Install React
+- rpm install react-app-rewired
+- npm run build                     ; Emits flat build into ./build folder
