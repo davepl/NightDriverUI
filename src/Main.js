@@ -8,28 +8,39 @@ import {
 import Home from "./Home";
 import Settings from "./Settings";
 import Effects from "./Effects";
- 
+import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import Button from '@material-ui/core/Button';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#FF0000'
+    }
+  }
+})
 class Main extends Component {
   render() {
     return (
-      <BrowserRouter>
- 
-        <div>
-          <h1>NightDriver LED</h1>
-          <ul className="header">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/effects">Effects</NavLink></li>
-            <li><NavLink to="/settings">Settings</NavLink></li>
-          </ul>
-        </div>
-        <div className="content">
-        <Routes>
-              <Route path="/" exact element={<Home/>}/>
-              <Route path="/effects" element={<Effects/>}/>
-              <Route path="/settings" element={<Settings/>}/>
-          </Routes>             
-        </div>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <div>
+            <h1>NightDriver LED</h1>
+            <ul className="header">
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/effects">Effects</NavLink></li>
+              <li><NavLink to="/settings">Settings</NavLink></li>
+            </ul>
+          </div>
+          <div className="content">
+          <Routes>
+            <Route path="/" exact element={<Home/>}/>
+            <Route path="/effects" element={<Effects/>}/>
+            <Route path="/settings" element={<Settings/>}/>
+          </Routes>    
+          <Button variant="contained">Hello</Button>
+          </div>
+        </BrowserRouter>
+      </ThemeProvider>
     );
   }
 }
