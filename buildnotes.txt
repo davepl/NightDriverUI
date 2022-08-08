@@ -2,4 +2,5 @@
 - Install React
 - rpm install react-app-rewired
 % npm i @material-ui/core --legacy-peer-deps
+ npm i @mui/icons-material --legacy-peer-deps
 - npm run build                     ; Emits flat build into ./build folder

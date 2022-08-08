@@ -8,16 +8,18 @@ import {
 import Home from "./Home";
 import Settings from "./Settings";
 import Effects from "./Effects";
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { createTheme }   from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
-const theme = createMuiTheme({
+import {blue} from '@mui/material/colors';
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#FF0000'
-    }
-  }
-})
+      main: blue[500],
+    },
+  },
+});
+
 class Main extends Component {
   render() {
     return (
