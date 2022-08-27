@@ -1,7 +1,21 @@
 import React, { Component } from "react";
  
-class Home extends Component {
-  render() {
+class Home extends Component 
+{
+  componentDidMount()
+  {
+      fetch("http://192.168.8.152/getEffectList")
+          .then(res => res.json())
+          .then(json => {
+             this.setState({
+              isLoaded: true,
+              effects: json.Effects,
+             }) 
+          });
+  }
+  
+  render() 
+  {
     return (
       <div>
         <h2>HELLO</h2>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+const hostURL = "http://192.168.8.152/";
+
 class Effects extends Component 
 {
     constructor(props)
@@ -13,7 +15,7 @@ class Effects extends Component
     
     componentDidMount()
     {
-        fetch("http://192.168.8.152/getEffectList")
+        fetch(hostURL + "getEffectList")
             .then(res => res.json())
             .then(json => {
                this.setState({
