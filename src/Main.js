@@ -11,7 +11,6 @@ import Effects from "./Effects";
 import Statistics from "./Statistics";
 import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
 import { createTheme } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 
