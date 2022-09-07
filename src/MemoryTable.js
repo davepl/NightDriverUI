@@ -32,10 +32,10 @@ export default function MemoryTable(data)
           <TableHead>
             <TableRow>
               <TableCell>Memory Type</TableCell>
-              <TableCell align="right">Total Size</TableCell>
-              <TableCell align="right">Bytes Used&nbsp;(g)</TableCell>
-              <TableCell align="right">Bytes Free&nbsp;(g)</TableCell>
-              <TableCell align="right">Min Block&nbsp;(g)</TableCell>
+              <TableCell align="right">Total Size&nbsp;(K)</TableCell>
+              <TableCell align="right">Bytes Used&nbsp;(K)</TableCell>
+              <TableCell align="right">Bytes Free&nbsp;(K)</TableCell>
+              <TableCell align="right">Min Block&nbsp;(K)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -47,10 +47,10 @@ export default function MemoryTable(data)
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell align="right">{row.size}</TableCell>
-                <TableCell align="right">{row.used}</TableCell>
-                <TableCell align="right">{row.free}</TableCell>
-                <TableCell align="right">{row.min}</TableCell>
+                <TableCell align="right">{Math.floor(row.size / 1024)}</TableCell>
+                <TableCell align="right">{Math.floor(row.used / 1024)}</TableCell>
+                <TableCell align="right">{Math.floor(row.free / 1024)}</TableCell>
+                <TableCell align="right">{Math.floor(row.min  / 1024)}</TableCell>
               </TableRow>
             ))}
           </TableBody>

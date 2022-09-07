@@ -94,14 +94,6 @@ class Statistics extends Component
             <MemoryTable rows={statistics}/>
           </div>
 
-          <p>Stats:</p>
-          <ol>
-            <li>FPS: {statistics["LED_FPS"]}</li>
-            <li>Facilisis bibendum</li>
-            <li>Vestibulum vulputate</li>
-            <li>Eget erat</li>
-            <li>Id porttitor</li>
-          </ol>
         </div>
       );
     }
