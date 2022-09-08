@@ -29,23 +29,11 @@ const hostURL = "http://192.168.8.152/";
 
 class Main extends Component 
 {
-    componentDidMount() {
-        fetch(hostURL + "getEffectList")
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true,
-                    effects: json.Effects,
-                })
-            });
-    }
-
     render() {
         return (
             <ThemeProvider theme={theme}>
                 <BrowserRouter>
                     <Button variant="contained" color="primary">Hello</Button>
-
                     <div>
                         <h1>NightDriver LED</h1>
                         <ul className="header">
@@ -57,7 +45,7 @@ class Main extends Component
                     </div>
                     <div className="content">
                         <Routes>
-                            <Route path="/" exact element={<Home />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/effects" element={<Effects />} />
                             <Route path="/statistics" element={<Statistics />} />
                             <Route path="/settings" element={<Settings />} />

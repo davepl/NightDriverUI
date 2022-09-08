@@ -6,8 +6,6 @@ import "./index.css";
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
-    <StyledEngineProvider injectFirst>
       <Main />
-    </StyledEngineProvider>
   </React.StrictMode>
 );
