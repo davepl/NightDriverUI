@@ -9,29 +9,11 @@ import Home from "./Home";
 import Settings from "./Settings";
 import Effects from "./Effects";
 import Statistics from "./Statistics";
-import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { createTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: purple[500],
-        },
-        secondary: {
-            main: '#f44336',
-        },
-    },
-});
-
-const hostURL = "http://192.168.8.152/";
-
 class Main extends Component 
 {
     render() {
         return (
-            <ThemeProvider theme={theme}>
                 <BrowserRouter>
                     <Button variant="contained" color="primary">Hello</Button>
                     <div>
@@ -52,7 +34,6 @@ class Main extends Component
                         </Routes>
                     </div>
                 </BrowserRouter>
-            </ThemeProvider>
         );
     }
 }
